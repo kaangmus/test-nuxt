@@ -12,6 +12,8 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
+import nuxt_plugin_plugin_65ed6d0c from 'nuxt_plugin_plugin_65ed6d0c' // Source: .\\components\\plugin.js (mode: 'all')
+
 // Component: <ClientOnly>
 Vue.component(ClientOnly.name, ClientOnly)
 
@@ -60,7 +62,7 @@ async function createApp(ssrContext, config = {}) {
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
-    head: {"meta":[],"link":[],"style":[],"script":[]},
+    head: {"title":"Develeper Assements","htmlAttrs":{"lang":"en"},"meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":""}],"link":[{"rel":"stylesheet","href":"https:\u002F\u002Ffonts.googleapis.com\u002Fcss2?family=Quicksand:wght@300;400;500;600;700&display=swap"},{"rel":"stylesheet","href":"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Ffont-awesome\u002F5.15.3\u002Fcss\u002Fall.min.css"}],"script":[{"src":"\u002Fjs\u002Fcoreui.bundle.min.js"}],"style":[]},
 
     router,
     nuxt: {
@@ -173,6 +175,10 @@ async function createApp(ssrContext, config = {}) {
     }
   }
   // Plugin execution
+
+  if (typeof nuxt_plugin_plugin_65ed6d0c === 'function') {
+    await nuxt_plugin_plugin_65ed6d0c(app.context, inject)
+  }
 
   // Lock enablePreview in context
   if (process.static && process.client) {

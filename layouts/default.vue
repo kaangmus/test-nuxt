@@ -1,6 +1,24 @@
 <template>
   <div>
-    <div>My blog navigation bar here</div>
+    <Header />
     <Nuxt />
+    <Footer />
   </div>
 </template>
+
+<script>
+  import Header from '@/components/header.vue'
+  import Footer from '@/components/footer.vue'
+
+  export default {
+    components: {
+      Header,
+      Footer
+    }
+
+  }
+</script>
+
+<style>
+
+</style>

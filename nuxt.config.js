@@ -8,7 +8,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'nuxt-ecommerce',
+    title: 'Develeper Assements',
     htmlAttrs: {
       lang: 'en'
     },
@@ -48,7 +48,7 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/css/style.min.css',
-    '@/assets/css/custom.css',
+    // '@/assets/css/custom.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
